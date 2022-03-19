@@ -1,0 +1,120 @@
+.form {
+    padding: 25px 30px;
+
+    header {
+        font-size: 25px;
+        font-weight: 600;
+        padding-bottom: 10px;
+        border-bottom: #e6e6e6;
+    }
+
+    form {
+        margin: 20px 0;
+
+        .error-txt {
+            color: #721c24;
+            background: #f8d7da;
+            padding: 8px 10px;
+            text-align: center;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #f5c6cb;
+            display: none;
+
+            &.active {
+                display: block !important;
+            }
+        }
+
+        .name-detalis {
+            display: flex;
+
+            .field {
+                &:first-child {
+                    margin-right: 10px;
+                }
+
+                &:last-child {
+                    margin-left: 10px;
+                }
+            }
+        }
+
+        .field {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+            position: relative;
+
+            label {
+                margin-bottom: 2px;
+            }
+
+            input {
+                outline: none;
+
+                &[type='text'] {
+                    height: 40px;
+                    width: 100%;
+                    font-size: 16px;
+                    padding: 0 10px;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                }
+
+                &[type='password'] {
+                    height: 40px;
+                    width: 100%;
+                    font-size: 16px;
+                    padding: 0 10px;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                }
+
+                &[type='file'] {
+                    font-size: 17px;
+                }
+
+                &[type='submit'] {
+                    margin-top: 13px;
+                    height: 45px;
+                    bottom: none;
+                    font-size: 17px;
+                    font-weight: 400;
+                    background: #333;
+                    color: #fff;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+            }
+
+            i {
+                position: absolute;
+                right: 15px;
+                top: 70%;
+                color: #ccc;
+                transform: translateY(-50%);
+                cursor: pointer;
+
+                &.active:before {
+                    content: "\f070";
+                    color: #333;
+                }
+            }
+        }
+    }
+
+    .link {
+        text-align: center;
+        margin: 10px 0;
+        font-size: 17px;
+
+        a {
+            color: #333;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

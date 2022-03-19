@@ -1,0 +1,119 @@
+$f-chat: #333;
+$s-chat: #fff;
+
+.chat-area {
+
+    header {
+        display: flex;
+        align-items: center;
+        padding: 18px 30px;
+
+        img {
+            height: 45px;
+            width: 45px;
+            margin: 0px 15px;
+        }
+
+        .back-icon {
+            font-size: 18px;
+            color: #333;
+        }
+
+        span {
+            font-size: 17px;
+            font-weight: 500;
+        }
+
+    }
+}
+
+.chat-box {
+    height: 500px;
+    background-color: #f7f7f7;
+    padding: 10px 30px 20px;
+    box-shadow: inset 0 32px 32px -32px rgba(0, 0, 0, 0.05),
+        inset 0 -32px 32px -32px rgba(0, 0, 0, 0.05);
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+        @extend .users-list::-webkit-scrollbar;
+    }
+
+    .outgoing {
+        display: flex;
+
+        .details {
+            margin-left: auto;
+            max-width: calc(100% - 130px);
+
+            p {
+                background-color: $f-chat;
+                color: $s-chat;
+                border-radius: 18px 18px 0 18px;
+            }
+        }
+    }
+
+    .incoming {
+        $f-chat: #fff;
+        $s-chat: #333;
+        display: flex;
+        align-items: flex-end;
+
+        img {
+            height: 35px;
+            width: 35px;
+        }
+
+        .details {
+            margin-left: 10px;
+            margin-right: auto;
+            max-width: calc(100% - 130px);
+
+            p {
+                background-color: $f-chat;
+                color: $s-chat;
+                border-radius: 18px 18px 18px 0;
+            }
+        }
+    }
+
+    .chat {
+        margin: 15px 0;
+
+        p {
+            word-wrap: break-word;
+            padding: 8px 16px;
+            box-shadow: 0 0 32px rgba(0, 0, 0, 0.08),
+                0 16px 16px -16px rgba(0, 0, 0, 0.1);
+        }
+    }
+
+}
+
+.typing-area {
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-between;
+
+    input {
+        height: 45px;
+        width: calc(100% - 58px);
+        font-size: 17px;
+        border: 1px solid #ccc;
+        padding: 0 13px;
+        border-radius: 5px 0 0 5px;
+        outline: none;
+    }
+
+    button {
+        width: 55px;
+        border: none;
+        outline: none;
+        background-color: #333;
+        color: #fff;
+        font-size: 17px;
+        cursor: pointer;
+        border-radius: 0 5px 5px 0;
+    }
+}
